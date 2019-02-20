@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(name='snowballstemmer',
       version='1.2.1',
-      description='This package provides 16 stemmer algorithms (15 + Poerter English stemmer) generated from Snowball algorithms.',
+      description='This package provides 17 stemmer algorithms (16 + Poerter English stemmer) generated from Snowball algorithms.',
       long_description='''
 It includes following language algorithms:
 
@@ -23,6 +23,7 @@ It includes following language algorithms:
 * Russian
 * Spanish
 * Swedish
+* Tamil
 * Turkish
 
 This is a pure Python stemming library. If `PyStemmer <http://pypi.python.org/pypi/PyStemmer>`_ is available, this module uses
@@ -54,6 +55,7 @@ it to accelerate.
           'Natural Language :: Russian',
           'Natural Language :: Spanish',
           'Natural Language :: Swedish',
+          'Natural Language :: Tamil',
           'Natural Language :: Turkish',
           'Operating System :: OS Independent',
           'Programming Language :: Python :: 2.5',

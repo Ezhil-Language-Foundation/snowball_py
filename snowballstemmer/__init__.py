@@ -1,4 +1,4 @@
-__all__ = ('language', 'stemmer')
+__all__ = ('algorithms', 'stemmer')
 
 from .danish_stemmer import DanishStemmer
 from .dutch_stemmer import DutchStemmer
@@ -16,6 +16,7 @@ from .russian_stemmer import RussianStemmer
 from .spanish_stemmer import SpanishStemmer
 from .swedish_stemmer import SwedishStemmer
 from .turkish_stemmer import TurkishStemmer
+from .tamil_stemmer import TamilStemmer
 
 _languages = {
     'danish': DanishStemmer,
@@ -34,6 +35,7 @@ _languages = {
     'spanish': SpanishStemmer,
     'swedish': SwedishStemmer,
     'turkish': TurkishStemmer,
+    'tamil'  : TamilStemmer,
 }
 
 try:
@@ -46,7 +48,9 @@ def algorithms():
     if cext_available:
         return Stemmer.language()
     else:
-        return list(_languages.keys())
+        rval = list(_languages.keys())
+        rval.sort()
+        return rval
 
 def stemmer(lang):
     if cext_available:
